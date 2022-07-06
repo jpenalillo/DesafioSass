@@ -1,0 +1,53 @@
+// Required
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script);
+
+// Create your own map
+$custom-colors: (
+  "purpura": #cf649a
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+$primary:#000  !default;
+$secondary:$gray-600;
+$success:$green;
+$info: $cyan;
+$warning:$yellow;
+$danger:$red;
+$dark:$gray-900;
+$light:$gray-100;
+$purple:#cf649a;
+$theme-colors:(
+    "primary":$primary,
+    "secondary":$secondary,
+    "success":$success,
+    "info":$info,
+    "warning":$warning,
+    "danger":$danger,
+    "dark":$dark,
+    "light":$light
+);
+.cardHijo{
+    @extend .card;
+    font-family: 'Dancing Script', serif;
+
+}
+
+// Create your own map
+$custom-colors: (
+  "purpura": $purple
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+.cardTitleHijo{
+    @extend .card-title;
+    color:$purple;
+
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";
